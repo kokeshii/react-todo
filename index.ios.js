@@ -32,6 +32,7 @@ var {
   Text,
   Image,
   View,
+  TouchableHighlight,
 } = React;
 
 var TodoList = React.createClass({
@@ -47,7 +48,9 @@ var TodoList = React.createClass({
     var task = MOCKED_TASKS_DATA[0];
     return (
       <View style={styles.container}>
+      <TouchableHighlight onPress={() => console.log('pressed')}>
         <Image source={{uri: CHECKMARK_IMG_URL}} style={styles.checkmarkIcon} />
+        </TouchableHighlight>
         <View style={styles.rightContainer}>
           <Text>{task.title}</Text>
           <Text>{task.dateDue.toDateString()}</Text>
