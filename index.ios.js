@@ -47,8 +47,7 @@ var TodoList = React.createClass({
   render: function() {
     var task = MOCKED_TASKS_DATA[0];
     return (
-      <View style={styles.container}>
-      <TouchableHighlight onPress={() => console.log('pressed')}>
+      <TouchableHighlight onPress={ () => console.log("hiiee") }>
         <Image source={{uri: CHECKMARK_IMG_URL}} style={styles.checkmarkIcon} />
         </TouchableHighlight>
         <View style={styles.rightContainer}>
