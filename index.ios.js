@@ -32,6 +32,7 @@ var {
   Text,
   Image,
   View,
+  TouchableHighlight,
 } = React;
 
 var TodoList = React.createClass({
@@ -52,7 +53,9 @@ var TodoList = React.createClass({
         </View>
         <View style={styles.rightContainer}>
           <View style={styles.checkContainer}>
-            <Image source={{uri: CHECKMARK_IMG_URL}} style={styles.checkmarkIcon} />
+            <TouchableHighlight onPress={ () => console.log("hiiee") }>
+                 <Image source={{uri: CHECKMARK_IMG_URL}} style={styles.checkmarkIcon} />
+            </TouchableHighlight>
           </View>
           <View style={styles.taskContainer}>
           <Text style={styles.title}>{task.title}</Text>
@@ -65,6 +68,9 @@ var TodoList = React.createClass({
 });
 
 var styles = StyleSheet.create({
+  doneTask: {
+    opacity: 0.5,
+  },
   container: {
     flex: 1,
     flexDirection: 'column',
