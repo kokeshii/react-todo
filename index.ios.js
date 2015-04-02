@@ -47,6 +47,7 @@ var TodoList = React.createClass({
   render: function() {
     var task = MOCKED_TASKS_DATA[0];
     return (
+      <View style={styles.taskContainer}>
       <TouchableHighlight onPress={ () => console.log("hiiee") }>
         <Image source={{uri: CHECKMARK_IMG_URL}} style={styles.checkmarkIcon} />
         </TouchableHighlight>
@@ -60,6 +61,16 @@ var TodoList = React.createClass({
 });
 
 var styles = StyleSheet.create({
+  taskContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  doneTask: {
+    opacity: 0.5,
+  },
   container: {
     flex: 1,
     flexDirection: 'row',
