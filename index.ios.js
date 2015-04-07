@@ -152,7 +152,7 @@ var styles = StyleSheet.create({
     borderColor: '#FFFFFF',
     borderRadius: 5,
     backgroundColor: 'rgba(250, 250, 250, 0.2)',
-    margin: 10,
+    marginBottom: 10,
   },
   plusContainer: {
     flex: 1,
@@ -169,7 +169,7 @@ var styles = StyleSheet.create({
     fontSize: 35,
   },
   titleContainer: {
-    flex: 7,
+    flex: 1,
     alignItems: 'center',
   },
   titleBar: {
